@@ -14,7 +14,7 @@ TARGET = SFE
 all: $(TARGET)
 
 $(OBJ_DIR)/%.o: src/%.c | $(OBJ_DIR)
-	g++ $(INCLUDE_FLAGS) $(CFLAGS) -c $< -o $@
+	$(CC) $(INCLUDE_FLAGS) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
