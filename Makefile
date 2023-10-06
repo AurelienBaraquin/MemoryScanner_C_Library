@@ -5,7 +5,7 @@ OBJ_DIR = obj
 
 SRC := $(shell find src -name "*.c")
 
-OBJ := $(addprefix $(OBJ_DIR)/,$(notdir $(SRC:.cpp=.o)))
+OBJ := $(addprefix $(OBJ_DIR)/,$(notdir $(SRC:.c=.o)))
 
 TARGET = SFE
 
@@ -13,7 +13,7 @@ TARGET = SFE
 
 all: $(TARGET)
 
-$(OBJ_DIR)/%.o: src/%.cpp | $(OBJ_DIR)
+$(OBJ_DIR)/%.o: src/%.c | $(OBJ_DIR)
 	g++ $(INCLUDE_FLAGS) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR):
