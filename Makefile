@@ -1,10 +1,3 @@
-##
-## EPITECH PROJECT, 2023
-## Makefile
-## File description:
-## Makefile
-##
-
 CFLAGS += -O3 -W -Wall -Wextra
 INCLUDE_FLAGS += -I./includes
 
